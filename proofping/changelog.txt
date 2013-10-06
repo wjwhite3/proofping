@@ -22,5 +22,3 @@ Changelog
 
 0.01
 	- First version!
-	
-Here is a throwaway line just to see if commits work from my laptop
