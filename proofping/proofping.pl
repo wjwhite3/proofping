@@ -62,8 +62,8 @@ while(1==1)
 			$timeStamp = localtime(time());
 			chomp($line);
 			#print $line . "\n"; #for testing only
-			if($line =~ m/time=(.*?)ms/){		#this pulls out just the latency number for each ping result
-				$latency = $1;					#and stuffs it into $latency
+			if($line =~ m/time=(.*?)ms/){						#this pulls out just the latency number for each ping result
+				$latency = sprintf("%.0f",$1);					#and stuffs it into $latency (rounded b/c i don't need it that precise ffs..)
 			}
 			if($line !~ m/time=(.*?)ms/){
 				$latency = '*'
