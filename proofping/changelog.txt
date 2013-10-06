@@ -1,0 +1,24 @@
+Changelog
+
+0.05
+	- added win/mac automatic OS awareness. ProofPing will now choose what lines to strip
+		from ping's output based on what OS it's running on. Linux still untested.
+
+0.04
+	- changed output format: time(), localtime(time), target, latency
+	- Added ppp.pl (ProofPingParse) to display info about the log that ProofPing generates
+		ppp is an improved version of the logic that I used in PingPlotParse, which worked
+		on the log file produced by PingPlotter for Windows
+	- Added mon.pl, which monitors live output of proofping. 
+	- added display of how much time log covers, in hours and days
+	
+0.03
+	- added win7stripstring
+	- the output is now in format: time(), target, latency
+
+0.02	9/21/13
+	- made config section to make everything more modular
+		and work towards single mac/pc version
+
+0.01
+	- First version!
