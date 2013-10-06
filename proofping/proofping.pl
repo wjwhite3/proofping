@@ -43,7 +43,7 @@ if		($^O =~ /darwin/) 	{ $stripString = $osxStripString; $command = $osxCommand;
 elsif	($^O =~ /MSWin32/)	{ $stripString = $win7StripString; $command = $win7Command;}
 else	{ die "cannot determine OS\n"; }
 
-print "command is $command\nstripstring is $stripString\n";
+#print "command is $command\nstripstring is $stripString\n";
 
 ################################################
 # /Config Section
