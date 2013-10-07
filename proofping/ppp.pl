@@ -147,12 +147,17 @@ foreach $start (@outStarts){
 	$duration = $outEndLine[0] - $outStartLine[0] ;		#duration in seconds
 	$pDuration = $end - $start;							#duration in packets
 	
+	$totalOutageDuration += $duration;					#aggregate total of outages in seconds so we can display and do average math
+	
 	print "------------------------------------------------------------------------------\n";
 	print "Outage from $startTime to $endTime ($duration seconds). \nLost $pDuration packets\n";
 	
 	$index++;
 }
 
+$avgOutageDuration = sprintf("%.2f",$totalOutageDuration / scalar(@outStarts));
+print "\naverage duration of outage is $avgOutageDuration seconds\n";
+print "total outage time is $totalOutageDuration seconds\n";
 
 #NEXT ADDITION: NEEDS TO LIST OUTAGES AND DURATIONS, MAYBE WITH AN OPTION TO FILTER OUT
 #OUTAGES BASED ON DURATION (EG DONT LIST UNDER 5 SECONDS)
