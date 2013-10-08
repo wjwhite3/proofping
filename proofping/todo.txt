@@ -1,2 +1,3 @@
 Todo:
 
+acknowledge that there need to be different pinger routines for windows and mac. perhaps make this a windows only script.
